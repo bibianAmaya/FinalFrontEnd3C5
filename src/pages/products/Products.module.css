@@ -1,0 +1,103 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  }
+
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
+  gap: 10px;
+}
+
+.productCard {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.productCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.productImage {
+  position: absolute;
+  top: 11px;
+  left: 3px;
+  width: 95%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productInfo {
+  padding: 5px;
+}
+
+.productName {
+  font-size: 0.75rem;
+  color: #333;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favoriteButton, .addToCartButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.favoriteButton:hover, .addToCartButton:hover {
+  transform: scale(1.1);
+}
+
+.favoriteNoActive{
+  stroke: #999;
+  fill: none; /* Sin relleno por defecto */
+}
+
+.favoriteActive {
+  fill: #ff6b6b; /* Color rojo para favoritos */
+}
+
+.addToCartButton {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 20%;
+  width: 24px;
+  height: 24px;
+}
+
+.addToCartButton:hover {
+  background-color: #45a049;
+}
+
